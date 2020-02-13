@@ -26,14 +26,14 @@ Connection ~ 3750 3800
 Connection ~ 3950 3800
 Connection ~ 4100 2450
 Connection ~ 4100 3800
-Connection ~ 4150 5050
-Connection ~ 4300 5050
 Connection ~ 4450 2150
 Connection ~ 4450 3800
 Connection ~ 4800 1850
 Connection ~ 5650 4000
 Connection ~ 5750 4300
 Connection ~ 5750 4600
+Connection ~ 5950 5750
+Connection ~ 6100 5750
 Connection ~ 6400 4600
 Connection ~ 6550 950 
 Connection ~ 6550 1250
@@ -76,6 +76,34 @@ Wire Wire Line
 Wire Wire Line
 	2150 3350 2550 3350
 Wire Wire Line
+	2550 4750 2850 4750
+Wire Wire Line
+	2550 4850 2850 4850
+Wire Wire Line
+	2550 4950 2850 4950
+Wire Wire Line
+	2550 5050 2850 5050
+Wire Wire Line
+	2550 5150 2850 5150
+Wire Wire Line
+	2550 5250 2850 5250
+Wire Wire Line
+	2550 5425 2850 5425
+Wire Wire Line
+	2550 5525 2850 5525
+Wire Wire Line
+	2550 5850 2750 5850
+Wire Wire Line
+	2550 6475 2675 6475
+Wire Wire Line
+	2675 5950 2550 5950
+Wire Wire Line
+	2675 6475 2675 5950
+Wire Wire Line
+	2750 5850 2750 6575
+Wire Wire Line
+	2750 6575 2550 6575
+Wire Wire Line
 	2850 1850 4800 1850
 Wire Wire Line
 	2850 2150 4450 2150
@@ -100,8 +128,6 @@ Wire Wire Line
 Wire Wire Line
 	3400 3800 3750 3800
 Wire Wire Line
-	3500 5050 4150 5050
-Wire Wire Line
 	3750 2750 3750 3500
 Wire Wire Line
 	3750 2750 5900 2750
@@ -116,10 +142,6 @@ Wire Wire Line
 Wire Wire Line
 	4100 3800 4450 3800
 Wire Wire Line
-	4150 5050 4300 5050
-Wire Wire Line
-	4300 5050 6400 5050
-Wire Wire Line
 	4450 2150 4450 3500
 Wire Wire Line
 	4450 2150 5900 2150
@@ -131,6 +153,8 @@ Wire Wire Line
 	4800 1850 4800 3500
 Wire Wire Line
 	4800 1850 6400 1850
+Wire Wire Line
+	5300 5750 5950 5750
 Wire Wire Line
 	5600 4900 6400 4900
 Wire Wire Line
@@ -162,13 +186,21 @@ Wire Wire Line
 Wire Wire Line
 	5900 3300 6400 3300
 Wire Wire Line
+	5950 5750 6100 5750
+Wire Wire Line
 	6050 4600 6400 4600
 Wire Wire Line
 	6200 950  6550 950 
 Wire Wire Line
 	6200 1250 6550 1250
 Wire Wire Line
+	6325 5050 6325 5750
+Wire Wire Line
+	6325 5750 6100 5750
+Wire Wire Line
 	6400 4600 6400 4900
+Wire Wire Line
+	6400 5050 6325 5050
 Wire Wire Line
 	6550 950  6750 950 
 Wire Wire Line
@@ -259,9 +291,9 @@ Text Notes 2900 1550 2    50   ~ 0
 Dead time - 180ns
 Text Notes 2900 3650 2    50   ~ 0
 T=100ns
-Text Notes 4650 4750 2    50   ~ 0
+Text Notes 5475 5575 2    50   ~ 0
 T<=500ns
-Text Notes 5000 4950 2    50   ~ 0
+Text Notes 5825 5475 2    50   ~ 0
 Tshutdown = 150ns
 Text Notes 8650 4700 0    50   ~ 0
 T=1us
@@ -283,22 +315,26 @@ Text Label 2150 3050 0    50   ~ 0
 HINU
 Text Label 2150 3350 0    50   ~ 0
 LINU
-Text Label 2900 5200 2    50   ~ 0
+Text Label 2850 4750 2    50   ~ 0
 HINW
-Text Label 2900 5300 2    50   ~ 0
+Text Label 2850 4850 2    50   ~ 0
 LINW
-Text Label 2900 5400 2    50   ~ 0
+Text Label 2850 4950 2    50   ~ 0
 HINV
-Text Label 2900 5500 2    50   ~ 0
+Text Label 2850 5050 2    50   ~ 0
 LINV
-Text Label 2900 5600 2    50   ~ 0
+Text Label 2850 5150 2    50   ~ 0
 HINU
-Text Label 2900 5700 2    50   ~ 0
+Text Label 2850 5250 2    50   ~ 0
 LINU
-Text Label 3500 5050 0    50   ~ 0
+Text Label 2850 5425 2    50   ~ 0
+ISENSE
+Text Label 2850 5525 2    50   ~ 0
 NTC
 Text Label 4750 4000 0    50   ~ 0
 VSHUNT
+Text Label 5300 5750 0    50   ~ 0
+NTC
 Text Label 5600 4900 0    50   ~ 0
 ISENSE
 Text Label 6200 1850 2    50   ~ 0
@@ -328,17 +364,6 @@ VOUT
 Text Label 10600 3500 2    50   ~ 0
 UOUT
 $Comp
-L power:+3V3 #PWR?
-U 1 1 5E3E7EEA
-P 4150 4750
-F 0 "#PWR?" H 4150 4600 50  0001 C CNN
-F 1 "+3V3" H 4165 4923 50  0000 C CNN
-F 2 "" H 4150 4750 50  0001 C CNN
-F 3 "" H 4150 4750 50  0001 C CNN
-	1    4150 4750
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+1V5 #PWR?
 U 1 1 5E421A65
 P 5650 3700
@@ -347,6 +372,17 @@ F 1 "+1V5" H 5665 3873 50  0000 C CNN
 F 2 "" H 5650 3700 50  0001 C CNN
 F 3 "" H 5650 3700 50  0001 C CNN
 	1    5650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E3E7EEA
+P 5950 5450
+F 0 "#PWR?" H 5950 5300 50  0001 C CNN
+F 1 "+3V3" H 5965 5623 50  0000 C CNN
+F 2 "" H 5950 5450 50  0001 C CNN
+F 3 "" H 5950 5450 50  0001 C CNN
+	1    5950 5450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -384,17 +420,6 @@ F 3 "" H 3950 3800 50  0001 C CNN
 $EndComp
 $Comp
 L power:GND #PWR?
-U 1 1 5E3ECC05
-P 4300 5350
-F 0 "#PWR?" H 4300 5100 50  0001 C CNN
-F 1 "GND" H 4305 5177 50  0000 C CNN
-F 2 "" H 4300 5350 50  0001 C CNN
-F 3 "" H 4300 5350 50  0001 C CNN
-	1    4300 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
 U 1 1 5E430589
 P 5450 4600
 F 0 "#PWR?" H 5450 4350 50  0001 C CNN
@@ -402,6 +427,17 @@ F 1 "GND" H 5455 4427 50  0000 C CNN
 F 2 "" H 5450 4600 50  0001 C CNN
 F 3 "" H 5450 4600 50  0001 C CNN
 	1    5450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3ECC05
+P 6100 6050
+F 0 "#PWR?" H 6100 5800 50  0001 C CNN
+F 1 "GND" H 6105 5877 50  0000 C CNN
+F 2 "" H 6100 6050 50  0001 C CNN
+F 3 "" H 6100 6050 50  0001 C CNN
+	1    6100 6050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -537,17 +573,6 @@ F 3 "~" H 2700 3350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R7
-U 1 1 5E3E76D1
-P 4150 4900
-F 0 "R7" V 4356 4900 50  0000 C CNN
-F 1 "1k" V 4265 4900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 4900 50  0001 C CNN
-F 3 "~" H 4150 4900 50  0001 C CNN
-	1    4150 4900
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R8
 U 1 1 5E422C3E
 P 5500 4000
@@ -590,6 +615,17 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 5830 4600 50  0001 C CNN
 F 3 "~" H 5900 4600 50  0001 C CNN
 	1    5900 4600
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5E3E76D1
+P 5950 5600
+F 0 "R7" V 6156 5600 50  0000 C CNN
+F 1 "1k" V 6065 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 5600 50  0001 C CNN
+F 3 "~" H 5950 5600 50  0001 C CNN
+	1    5950 5600
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R12
@@ -712,17 +748,6 @@ F 3 "~" H 4100 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
-U 1 1 5E3E7FD6
-P 4300 5200
-F 0 "C5" H 4415 5245 50  0000 L CNN
-F 1 "1n" H 4415 5155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4338 5050 50  0001 C CNN
-F 3 "~" H 4300 5200 50  0001 C CNN
-	1    4300 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C6
 U 1 1 5E3E15E4
 P 4450 3650
@@ -753,6 +778,17 @@ F 1 "100p" H 5665 4055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5688 4000 50  0001 C CNN
 F 3 "~" H 5650 4150 50  0001 C CNN
 	1    5650 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5E3E7FD6
+P 6100 5900
+F 0 "C5" H 6215 5945 50  0000 L CNN
+F 1 "1n" H 6215 5855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6138 5750 50  0001 C CNN
+F 3 "~" H 6100 5900 50  0001 C CNN
+	1    6100 5900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -898,29 +934,29 @@ F 3 "" H 7200 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 700  4400 1900 1450
+S 650  4625 1900 1450
 U 5E46F0D9
 F0 "Microcontroller" 50
 F1 "mcu.sch" 50
-F2 "NTC" I R 2600 5050 50 
-F3 "ISENSE" I R 2600 4950 50 
-F4 "DC_BUS_MON" I R 2600 4850 50 
-F5 "HINW" I R 2600 5200 50 
-F6 "LINW" I R 2600 5300 50 
-F7 "HINV" I R 2600 5400 50 
-F8 "LINV" I R 2600 5500 50 
-F9 "LINU" I R 2600 5600 50 
-F10 "HINU" I R 2600 5700 50 
-F11 "INRUSH_BYPASS" I R 2600 4500 50 
+F2 "NTC" I R 2550 5525 50 
+F3 "ISENSE" I R 2550 5425 50 
+F4 "DC_BUS_MON" I R 2550 5950 50 
+F5 "HINW" I R 2550 4750 50 
+F6 "LINW" I R 2550 4850 50 
+F7 "HINV" I R 2550 4950 50 
+F8 "LINV" I R 2550 5050 50 
+F9 "LINU" I R 2550 5150 50 
+F10 "HINU" I R 2550 5250 50 
+F11 "INRUSH_BYPASS" I R 2550 5850 50 
 $EndSheet
 $Sheet
-S 1100 6450 1900 1250
+S 650  6325 1900 1250
 U 5E446F00
 F0 "Power Input" 50
 F1 "power-int.sch" 50
-F2 "DC_BUS_MON" I R 3000 6600 50 
-F3 "INRUSH_BYPASS" I R 3000 6750 50 
-F4 "LINE_L" I R 3000 7550 50 
-F5 "LINE_N" I R 3000 7450 50 
+F2 "DC_BUS_MON" I R 2550 6475 50 
+F3 "INRUSH_BYPASS" I R 2550 6575 50 
+F4 "LINE_L" I R 2550 7425 50 
+F5 "LINE_N" I R 2550 7325 50 
 $EndSheet
 $EndSCHEMATC
