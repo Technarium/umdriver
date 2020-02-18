@@ -265,3 +265,7 @@ uViaDrill=0.3
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[SchematicFrame]
+version=1
+[ModEditFrame]
+version=1
