@@ -90,8 +90,6 @@ Wire Wire Line
 	7400 4500 6850 4500
 Wire Wire Line
 	7850 4500 7400 4500
-Text Notes 8125 4000 2    50   ~ 0
-TODO: bridge footprint!!!
 Text Notes 8700 4650 2    50   ~ 0
 Corner frequency - 88Hz
 Text HLabel 3800 3750 0    50   Input ~ 0
@@ -289,7 +287,7 @@ F 3 "~" H 7400 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_NMOS_GDS Q1
+L Device:Q_NMOS_GSD Q1
 U 1 1 5E467F05
 P 6625 2900
 F 0 "Q1" H 6830 2945 50  0000 L CNN

@@ -11,8 +11,6 @@ version=1
 LibDir=
 [LibeditFrame]
 version=1
-[SchematicFrame]
-version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -283,4 +281,6 @@ dPairViaGap=0.25
 [PcbFrame]
 version=1
 [ModEditFrame]
+version=1
+[SchematicFrame]
 version=1
