@@ -300,15 +300,17 @@ F 3 "~" H 6625 2900 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:D_Bridge_+AA- D5
+L umdriver:GSIB2560-E3-45 D5
 U 1 1 5E447224
 P 6375 3900
 F 0 "D5" H 6525 4100 50  0000 L CNN
 F 1 "D_Bridge_+AA-" H 6125 4300 50  0000 L CNN
-F 2 "Diodes_THT:Diode_Bridge_18.5x5.5" H 6375 3900 50  0001 C CNN
+F 2 "umdriver:DIOB_GSIB2560-E3-45" H 6375 3900 50  0001 C CNN
 F 3 "~" H 6375 3900 50  0001 C CNN
+F 4 "LVB2560-M3/45" H 6375 3900 50  0001 C CNN "PartNo"
+F 5 "VISHAY" H 6375 3900 50  0001 C CNN "Manufacturer"
 	1    6375 3900
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Relay:FINDER-32.21-x000 K1

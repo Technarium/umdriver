@@ -1,4 +1,4 @@
-5772343901958642
+5784524679680642
 Battery_Holders
 Bulgin_BX0036_1xC
 
@@ -43015,6 +43015,20 @@ TQFN{space}NoLead
 55
 41
 Package_DFN_QFN
+TQFN-48-1EP_7x7mm_P0.5mm_EP5.1x5.1mm
+TQFN,{space}48{space}Pin{space}(https://pdfserv.maximintegrated.com/package_dwgs/21-0144.PDF),{space}generated{space}with{space}kicad-footprint-generator{space}ipc_noLead_generator.py
+TQFN{space}NoLead
+0
+58
+49
+Package_DFN_QFN
+TQFN-48-1EP_7x7mm_P0.5mm_EP5.1x5.1mm_ThermalVias
+TQFN,{space}48{space}Pin{space}(https://pdfserv.maximintegrated.com/package_dwgs/21-0144.PDF),{space}generated{space}with{space}kicad-footprint-generator{space}ipc_noLead_generator.py
+TQFN{space}NoLead
+0
+75
+49
+Package_DFN_QFN
 Texas_DRB0008A
 DFN-8,{space}3x3x1mm,{space}http://www.ti.com/lit/ds/symlink/ucc24610.pdf
 DRB0008A
@@ -43931,6 +43945,20 @@ WQFN{space}0.5
 0
 37
 33
+Package_DFN_QFN
+WQFN-42-1EP_3.5x9mm_P0.5mm_EP2.05x7.55mm
+WQFN,{space}42{space}Pin{space}(http://www.ti.com/lit/ds/symlink/ts3l501e.pdf#page=23),{space}generated{space}with{space}kicad-footprint-generator{space}ipc_noLead_generator.py
+WQFN{space}NoLead
+0
+57
+43
+Package_DFN_QFN
+WQFN-42-1EP_3.5x9mm_P0.5mm_EP2.05x7.55mm_ThermalVias
+WQFN,{space}42{space}Pin{space}(http://www.ti.com/lit/ds/symlink/ts3l501e.pdf#page=23),{space}generated{space}with{space}kicad-footprint-generator{space}ipc_noLead_generator.py
+WQFN{space}NoLead
+0
+82
+43
 Package_DIP
 DIP-4_W7.62mm
 4-lead{space}though-hole{space}mounted{space}DIP{space}package,{space}row{space}spacing{space}7.62{space}mm{space}(300{space}mils)
@@ -73654,6 +73682,13 @@ DEV
 1
 1
 umdriver
+DIOB_GSIB2560-E3-45
+
+
+0
+4
+4
+umdriver
 IRM-10-15
 
 
@@ -73666,7 +73701,7 @@ RESC_WSHM2818R0150FEA
 
 0
 4
-4
+2
 umdriver
 Relay_SPST
 Finder{space}32.21-x300{space}Relay,{space}SPST,{space}https://gfinder.findernet.com/assets/Series/355/S32EN.pdf
@@ -73681,6 +73716,13 @@ ST_STGIPQ8C60T-HZ
 0
 26
 26
+umdriver
+TB-YAG-8P
+
+
+0
+8
+8
 wemos
 4P-SMD-6.2X6.2X4H
 

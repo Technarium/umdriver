@@ -64,6 +64,18 @@ Connection ~ 9700 3150
 Connection ~ 9700 3900
 Connection ~ 9700 4750
 Wire Wire Line
+	900  1100 1300 1100
+Wire Wire Line
+	900  1200 1300 1200
+Wire Wire Line
+	900  1300 1450 1300
+Wire Wire Line
+	900  1400 1300 1400
+Wire Wire Line
+	900  1500 1300 1500
+Wire Wire Line
+	900  1600 1300 1600
+Wire Wire Line
 	2150 1850 2550 1850
 Wire Wire Line
 	2150 2150 2550 2150
@@ -95,6 +107,10 @@ Wire Wire Line
 	2550 5850 2750 5850
 Wire Wire Line
 	2550 6475 2675 6475
+Wire Wire Line
+	2550 7350 2950 7350
+Wire Wire Line
+	2550 7450 2950 7450
 Wire Wire Line
 	2675 5950 2550 5950
 Wire Wire Line
@@ -303,6 +319,16 @@ Text Notes 9800 4950 0    50   ~ 0
 Vref=0.54\nI = Vref/R
 Text Notes 10200 5050 2    50   ~ 0
 Itrip = 6A
+Text Label 1300 1100 2    50   ~ 0
+LINE_N
+Text Label 1300 1200 2    50   ~ 0
+LINE_L
+Text Label 1300 1400 2    50   ~ 0
+UOUT
+Text Label 1300 1500 2    50   ~ 0
+VOUT
+Text Label 1300 1600 2    50   ~ 0
+WOUT
 Text Label 2150 1850 0    50   ~ 0
 HINW
 Text Label 2150 2150 0    50   ~ 0
@@ -331,6 +357,10 @@ Text Label 2850 5425 2    50   ~ 0
 ISENSE
 Text Label 2850 5525 2    50   ~ 0
 NTC
+Text Label 2950 7350 2    50   ~ 0
+LINE_N
+Text Label 2950 7450 2    50   ~ 0
+LINE_L
 Text Label 4750 4000 0    50   ~ 0
 VSHUNT
 Text Label 5300 5750 0    50   ~ 0
@@ -363,6 +393,17 @@ Text Label 10600 2750 2    50   ~ 0
 VOUT
 Text Label 10600 3500 2    50   ~ 0
 UOUT
+$Comp
+L power:VBUS #PWR?
+U 1 1 5E546D7C
+P 1450 1300
+F 0 "#PWR?" H 1450 1150 50  0001 C CNN
+F 1 "VBUS" H 1465 1473 50  0000 C CNN
+F 2 "" H 1450 1300 50  0001 C CNN
+F 3 "" H 1450 1300 50  0001 C CNN
+	1    1450 1300
+	1    0    0    -1  
+$EndComp
 $Comp
 L power:+1V5 #PWR?
 U 1 1 5E421A65
@@ -929,6 +970,17 @@ F 5 "870055673001" H 9000 3650 50  0001 C CNN "PartNo"
 	-1   0    0    1   
 $EndComp
 $Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 5E53E3A9
+P 700 1400
+F 0 "J2" H 619 1916 50  0000 C CNN
+F 1 "Conn_01x08" H 619 1825 50  0000 C CNN
+F 2 "umdriver:TB-YAG-8P" H 700 1400 50  0001 C CNN
+F 3 "~" H 700 1400 50  0001 C CNN
+	1    700  1400
+	-1   0    0    -1  
+$EndComp
+$Comp
 L umdriver:STGIPQ8C60T U1
 U 1 1 5E39B8D5
 P 7200 2700
@@ -964,7 +1016,7 @@ F0 "Power Input" 50
 F1 "power-int.sch" 50
 F2 "DC_BUS_MON" I R 2550 6475 50 
 F3 "INRUSH_BYPASS" I R 2550 6575 50 
-F4 "LINE_L" I R 2550 7425 50 
-F5 "LINE_N" I R 2550 7325 50 
+F4 "LINE_L" I R 2550 7450 50 
+F5 "LINE_N" I R 2550 7350 50 
 $EndSheet
 $EndSCHEMATC
