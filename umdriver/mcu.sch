@@ -47,6 +47,8 @@ Connection ~ 9250 5600
 Connection ~ 9850 5600
 Connection ~ 9950 5600
 Connection ~ 10150 3750
+Connection ~ 10750 4800
+Connection ~ 10750 5000
 Connection ~ 10800 1125
 Connection ~ 10800 1425
 Wire Wire Line
@@ -166,21 +168,39 @@ Wire Wire Line
 Wire Wire Line
 	10150 4050 10500 4050
 Wire Wire Line
-	10150 4800 10600 4800
+	10150 4800 10500 4800
 Wire Wire Line
 	10150 5000 10500 5000
 Wire Wire Line
-	10500 4900 10600 4900
+	10500 4700 10850 4700
+Wire Wire Line
+	10500 4800 10500 4700
+Wire Wire Line
+	10500 4900 10850 4900
 Wire Wire Line
 	10500 5000 10500 4900
 Wire Wire Line
-	10600 3750 10600 4700
+	10600 3750 10600 4500
+Wire Wire Line
+	10600 4500 10850 4500
+Wire Wire Line
+	10600 5000 10750 5000
 Wire Wire Line
 	10600 5600 10600 5000
+Wire Wire Line
+	10750 4600 10850 4600
+Wire Wire Line
+	10750 4800 10750 4600
+Wire Wire Line
+	10750 4800 10750 5000
+Wire Wire Line
+	10750 5000 10850 5000
 Wire Wire Line
 	10800 1125 10800 850 
 Wire Wire Line
 	10800 1425 10800 1125
+Wire Wire Line
+	10850 4800 10750 4800
 Text Label 1200 5500 0    50   ~ 0
 SWD_IO
 Text Label 1200 5600 0    50   ~ 0
@@ -752,14 +772,14 @@ F 5 "EPSON" H 4340 2096 50  0001 C CNN "Manufacturer"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J3
+L Connector:Conn_01x06_Male J3
 U 1 1 5E43715D
-P 10800 4900
-F 0 "J3" H 10772 4783 50  0000 R CNN
-F 1 "Isolated rs485" H 10950 5100 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 10800 4900 50  0001 C CNN
-F 3 "~" H 10800 4900 50  0001 C CNN
-	1    10800 4900
+P 11050 4800
+F 0 "J3" H 11022 4683 50  0000 R CNN
+F 1 "Isolated rs485" H 11450 5200 50  0000 R CNN
+F 2 "Connectors_IDC:IDC-Header_2x03_Pitch2.54mm_Straight" H 11050 4800 50  0001 C CNN
+F 3 "~" H 11050 4800 50  0001 C CNN
+	1    11050 4800
 	-1   0    0    1   
 $EndComp
 $Comp
