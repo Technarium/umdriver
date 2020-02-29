@@ -9,8 +9,6 @@ version=1
 [eeschema]
 version=1
 LibDir=
-[ModEditFrame]
-version=1
 [SchematicFrame]
 version=1
 [PcbFrame]
@@ -284,3 +282,5 @@ uViaDrill=0.3
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[ModEditFrame]
+version=1
